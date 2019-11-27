@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="34.89128">
+<testcase classname="Task in adactin hotel application" name="To verify valid login details" time="15.470152">
+<system-out><![CDATA[When Launch hotel reservation application...................................passed
+And Login to the application using username and password....................passed
+Then User verifies the username in the HomePage.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Task in adactin hotel application" name="To verify whether the check-out date field accepts a later date than checkin date" time="6.503344">
+<system-out><![CDATA[When Launch hotel reservation application...................................passed
+And Login to the application using username and password....................passed
+And Select location as in test data.........................................passed
+And Select hotel as in test data............................................passed
+And Select room type as in test data........................................passed
+And Select no-of-rooms as in test data......................................passed
+And Enter check-in-date later than the checkout-date field as in test data..passed
+And Verify that system gives an error saying ‘check-in-date should not be later than check-out-date’.passed
+]]></system-out>
+</testcase>
+<testcase classname="Task in adactin hotel application" name="To check if error is reported if check-out date field is in the past" time="5.313272">
+<system-out><![CDATA[When Launch hotel reservation application...................................passed
+And Login to the application using username and password....................passed
+And Select location as in test data.........................................passed
+And Select hotel as in test data............................................passed
+And Select room type as in test data........................................passed
+And Select no-of-rooms as in test data......................................passed
+And Enter check-out-date as in test data....................................passed
+And User Click on Search button.............................................passed
+And Verify that application throws error message............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Task in adactin hotel application" name="To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel" time="7.604512">
+<system-out><![CDATA[When Launch hotel reservation application...................................passed
+And Login to the application using username and password....................passed
+And Select location as in test data.........................................passed
+And Select hotel as in test data............................................passed
+And Select room type as in test data........................................passed
+And Select no-of-rooms as in test data......................................passed
+And User Enters the check-out-date as in test data..........................passed
+And Select No-of-adults as in test data.....................................passed
+And Select No-of-children as in test data...................................passed
+And Click on Search button..................................................passed
+And Verify that hotel displayed is the same as selected in search Hotel form..passed
+]]></system-out>
+</testcase>
+</testsuite>
