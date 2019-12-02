@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
 		"html:src\\test\\resource\\com\\cucumber\\reports\\" }, 
 		features = "src\\test\\java\\com\\cucumber\\feature\\Adactin.feature", 
 		glue = "com.cucumber.stepdefinition",
-		dryRun = false, strict = true, monochrome = true)
+		dryRun = false, strict = true, monochrome = true,tags="@TC_101")
 
 public class TestRunner extends AllMethods{
 
