@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: com.cucumber.testrunner.TestRunnerClass
+-------------------------------------------------------------------------------
+Tests run: 84, Failures: 0, Errors: 15, Skipped: 34, Time elapsed: 1.387 s <<< FAILURE! - in com.cucumber.testrunner.TestRunnerClass
+Scenario: To verify valid login details.When Launch hotel reservation application  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify valid login details  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify valid login details  Time elapsed: 0.047 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether the check-out date field accepts a later date than checkin date.When Launch hotel reservation application  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether the check-out date field accepts a later date than checkin date  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether the check-out date field accepts a later date than checkin date  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To check if error is reported if check-out date field is in the past.When Launch hotel reservation application  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To check if error is reported if check-out date field is in the past  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To check if error is reported if check-out date field is in the past  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel.When Launch hotel reservation application  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel..When Launch hotel reservation application  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel.  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel.  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException
+

@@ -38,3 +38,12 @@ Feature: Task in adactin hotel application
     And Select No-of-children as in test data
     And Click on Search button.
     Then Verify that hotel displayed is the same as selected in search Hotel form.
+
+  @TC_105
+  Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel.
+    Given User launched application and selects as in test data
+    When User selects number of rooms as in test data
+    And User enters check-in and check-out date
+    And User selects number of adults and childrens as in test data
+    And User clicks on search button
+    Then User verifies that hotel displayed is same as selected in search hotel page

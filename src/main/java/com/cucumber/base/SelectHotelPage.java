@@ -1,4 +1,4 @@
-package com.cucumber.CucumberDay2;
+package com.cucumber.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

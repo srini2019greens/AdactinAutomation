@@ -1,46 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="34.89128">
-<testcase classname="Task in adactin hotel application" name="To verify valid login details" time="15.470152">
-<system-out><![CDATA[When Launch hotel reservation application...................................passed
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="54.14542">
+<testcase classname="Task in adactin hotel application" name="To verify valid login details" time="25.173959">
+<failure message="org.junit.ComparisonFailure: expected:&lt;Hello[@]cbzsrini!&gt; but was:&lt;Hello[ ]cbzsrini!&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at com.cucumber.stepdefinition.AdactinStepDefinition.user_verifies_the_username_in_the_HomePage(AdactinStepDefinition.java:68)&#13;&#10;&#9;at ✽.Then User verifies the username in the HomePage(src/test/java/com/cucumber/feature/Adactin.feature:9)&#13;&#10;"><![CDATA[When Launch hotel reservation application...................................passed
 And Login to the application using username and password....................passed
-Then User verifies the username in the HomePage.............................passed
-]]></system-out>
+Then User verifies the username in the HomePage.............................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<Hello[@]cbzsrini!> but was:<Hello[ ]cbzsrini!>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.cucumber.stepdefinition.AdactinStepDefinition.user_verifies_the_username_in_the_HomePage(AdactinStepDefinition.java:68)
+	at ✽.Then User verifies the username in the HomePage(src/test/java/com/cucumber/feature/Adactin.feature:9)
+]]></failure>
 </testcase>
-<testcase classname="Task in adactin hotel application" name="To verify whether the check-out date field accepts a later date than checkin date" time="6.503344">
+<testcase classname="Task in adactin hotel application" name="To verify whether the check-out date field accepts a later date than checkin date" time="5.89593">
 <system-out><![CDATA[When Launch hotel reservation application...................................passed
 And Login to the application using username and password....................passed
-And Select location as in test data.........................................passed
-And Select hotel as in test data............................................passed
+Given Select location as in test data.......................................passed
+When Select hotel as in test data...........................................passed
 And Select room type as in test data........................................passed
 And Select no-of-rooms as in test data......................................passed
 And Enter check-in-date later than the checkout-date field as in test data..passed
-And Verify that system gives an error saying ‘check-in-date should not be later than check-out-date’.passed
+Then Verify that system gives an error saying ‘check-in-date should not be later than check-out-date’.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Task in adactin hotel application" name="To check if error is reported if check-out date field is in the past" time="5.313272">
+<testcase classname="Task in adactin hotel application" name="To check if error is reported if check-out date field is in the past" time="4.280796">
 <system-out><![CDATA[When Launch hotel reservation application...................................passed
 And Login to the application using username and password....................passed
-And Select location as in test data.........................................passed
-And Select hotel as in test data............................................passed
+Given Select location as in test data.......................................passed
+When Select hotel as in test data...........................................passed
 And Select room type as in test data........................................passed
 And Select no-of-rooms as in test data......................................passed
 And Enter check-out-date as in test data....................................passed
 And User Click on Search button.............................................passed
-And Verify that application throws error message............................passed
+Then Verify that application throws error message...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Task in adactin hotel application" name="To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel" time="7.604512">
+<testcase classname="Task in adactin hotel application" name="To verify whether locations in Select Hotel page are displayed according to the location selected in Search Hotel" time="7.778613">
 <system-out><![CDATA[When Launch hotel reservation application...................................passed
 And Login to the application using username and password....................passed
-And Select location as in test data.........................................passed
-And Select hotel as in test data............................................passed
+Given Select location as in test data.......................................passed
+When Select hotel as in test data...........................................passed
 And Select room type as in test data........................................passed
 And Select no-of-rooms as in test data......................................passed
 And User Enters the check-out-date as in test data..........................passed
 And Select No-of-adults as in test data.....................................passed
 And Select No-of-children as in test data...................................passed
 And Click on Search button..................................................passed
-And Verify that hotel displayed is the same as selected in search Hotel form..passed
+Then Verify that hotel displayed is the same as selected in search Hotel form..passed
 ]]></system-out>
+</testcase>
+<testcase classname="Task in adactin hotel application" name="To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel." time="11.016122">
+<failure message="org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=username_show&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-06OKJ4FN', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'&#10;Driver info: driver.version: RemoteWebDriver&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)&#13;&#10;&#9;at org.openqa.selenium.By$ById.findElement(By.java:188)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy19.getAttribute(Unknown Source)&#13;&#10;&#9;at com.cucumber.stepdefinition.AdactinStepDefinition.user_verifies_that_hotel_displayed_is_same_as_selected_in_search_hotel_page(AdactinStepDefinition.java:241)&#13;&#10;&#9;at ✽.Then User verifies that hotel displayed is same as selected in search hotel page(src/test/java/com/cucumber/feature/Adactin.feature:49)&#13;&#10;"><![CDATA[When Launch hotel reservation application...................................passed
+And Login to the application using username and password....................passed
+Given User launched application and selects as in test data.................passed
+When User selects number of rooms as in test data...........................passed
+And User enters check-in and check-out date.................................passed
+And User selects number of adults and childrens as in test data.............passed
+And User clicks on search button............................................passed
+Then User verifies that hotel displayed is same as selected in search hotel page.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=username_show
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-06OKJ4FN', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy19.getAttribute(Unknown Source)
+	at com.cucumber.stepdefinition.AdactinStepDefinition.user_verifies_that_hotel_displayed_is_same_as_selected_in_search_hotel_page(AdactinStepDefinition.java:241)
+	at ✽.Then User verifies that hotel displayed is same as selected in search hotel page(src/test/java/com/cucumber/feature/Adactin.feature:49)
+]]></failure>
 </testcase>
 </testsuite>

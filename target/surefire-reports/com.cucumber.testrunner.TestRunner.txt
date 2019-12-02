@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.cucumber.testrunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 45, Failures: 2, Errors: 3, Skipped: 0, Time elapsed: 75.882 s <<< FAILURE! - in com.cucumber.testrunner.TestRunner
+Scenario: To verify valid login details.Then User verifies the username in the HomePage  Time elapsed: 0.054 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Hello[@]cbzsrini!> but was:<Hello[ ]cbzsrini!>
+
+Scenario: To verify valid login details  Time elapsed: 0.054 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Hello[@]cbzsrini!> but was:<Hello[ ]cbzsrini!>
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel..Then User verifies that hotel displayed is same as selected in search hotel page  Time elapsed: 0 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using id=username_show
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-06OKJ4FN', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: RemoteWebDriver
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel.  Time elapsed: 0 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using id=username_show
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-06OKJ4FN', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: RemoteWebDriver
+
+Scenario: To verify whether check-in date and Check Out date are being displayed in Select Hotel page according to the dates selected in search Hotel.  Time elapsed: 0.188 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-06OKJ4FN', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\cbzsr\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b0f16e1bd59f2cb6918603d5fc5b64fa
+

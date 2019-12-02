@@ -1,12 +1,13 @@
 package com.cucumber.stepdefinition;
 
-import com.cucumber.CucumberDay2.AllMethods;
-import com.cucumber.CucumberDay2.SelectHotelPage;
-import com.cucumber.CucumberDay2.homePage;
+import com.cucumber.base.AllMethods;
+import com.cucumber.base.SearchHotel;
+import com.cucumber.base.SelectHotelPage;
+import com.cucumber.base.homePage;
 import com.cucumber.helper.ConfigReader;
 import com.cucumber.helper.PageObjectHelper;
-import com.cucumber.testrunner.AdactinTestRunner;
-import com.cucumber.CucumberDay2.SearchHotel;
+import com.cucumber.testrunner.TestRunner;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
@@ -16,7 +17,9 @@ import cucumber.api.java.en.When;
 
 public class AdactinStepDefinition extends AllMethods {
 
-	public static WebDriver driver = AdactinTestRunner.driver;
+	public static WebDriver driver = TestRunner.driver;
+	
+	
 	public static PageObjectHelper ph = new PageObjectHelper(driver);
 	@Then("^User to launch hotel reservation application$")
 	public void user_to_launch_hotel_reservation_application() throws Throwable {
@@ -49,7 +52,7 @@ public class AdactinStepDefinition extends AllMethods {
 	public void user_enters_password_in_the_password_field() throws Throwable {
 		homePage hp = new homePage(driver);
 		moveTo(hp.getPasswordField());
-		elementVisibility(hp.getPasswordField(), "12345678");
+		elementVisibility(hp.getPasswordField(), "8JTM28");
 	}
 
 	@When("^User clicks on the login button$")
@@ -62,7 +65,7 @@ public class AdactinStepDefinition extends AllMethods {
 	@Then("^User verifies the username in the HomePage$")
 	public void user_verifies_the_username_in_the_HomePage() throws Throwable {
 		String text = ph.getSh().usernameVerification().getAttribute("value");
-		Assert.assertEquals("Hello cbzsrini!", text);
+		Assert.assertEquals("Hello@cbzsrini!", text);
 		System.out.println(text);
 	}
 
@@ -80,12 +83,11 @@ public class AdactinStepDefinition extends AllMethods {
 
 	@Given("^Login to the application using username and password as in test data$")
 	public void login_to_the_application_using_username_and_password_as_in_test_data() throws Throwable {
-		homePage hp = new homePage(driver);
-		hp.getEmailField();
-		elementVisibility(hp.getEmailField(), "cbzsrini");
-		moveTo(hp.getPasswordField());
-		elementVisibility(hp.getPasswordField(), "12345678");
-		clicks(hp.getLoginBtn());
+		ph.getHp().getEmailField();
+		elementVisibility(ph.getHp().getEmailField(), "cbzsrini");
+		moveTo(ph.getHp().getPasswordField());
+		elementVisibility(ph.getHp().getPasswordField(), "8JTM28");
+		clicks(ph.getHp().getLoginBtn());
 
 	}
 
@@ -140,14 +142,13 @@ public class AdactinStepDefinition extends AllMethods {
 		hp.getEmailField();
 		elementVisibility(hp.getEmailField(), "cbzsrini");
 		moveTo(hp.getPasswordField());
-		elementVisibility(hp.getPasswordField(), "12345678");
+		elementVisibility(hp.getPasswordField(), "8JTM28");
 		clicks(hp.getLoginBtn());
 
 	}
 
 	@When("^Enter check-out-date as in test data$")
 	public void enter_check_out_date_as_in_test_data() throws Throwable {
-		
 		elementVisibility(ph.getSh().checkOutDate(), "23/10/2019");
 		ph.getSh().searchButton().click();
 
@@ -161,7 +162,7 @@ public class AdactinStepDefinition extends AllMethods {
 
 	@When("^Verify that application throws error message$")
 	public void verify_that_application_throws_error_message() throws Throwable {
-		Assert.assertNotEquals("Check-Out Date shall be after Check-In Date", ph.getSh().checkOutErrorDisplay().getText());
+		Assert.assertNotEquals("Check-Out Date shall be after Check-In Date",ph.getSh().checkOutErrorDisplay().getText());
 	}
 
 	@When("^Select No-of-adults as in test data$")
@@ -201,5 +202,46 @@ public class AdactinStepDefinition extends AllMethods {
 		ph.getSh().searchButton().click();
 
 	}
+	
+	@Given("^User launched application and selects as in test data$")
+	public void user_launched_application_and_selects_as_in_test_data() throws Throwable {
+		ph.getSh().locationDD().click();
+		selectOptionInDD(ph.getSh().locationDD(), "visibletext", "Sydney");
+		isSelected(ph.getSh().locationDD());
+	    
+	}
+
+	@When("^User selects number of rooms as in test data$")
+	public void user_selects_number_of_rooms_as_in_test_data() throws Throwable {
+	    selectOptionInDD(ph.getSh().hotelsDD(), "index", "2");
+	    
+	}
+
+	@When("^User enters check-in and check-out date$")
+	public void user_enters_check_in_and_check_out_date() throws Throwable {
+		selectOptionInDD(ph.getSh().roomTypeDD(), "index", "4");
+	    
+	    
+	}
+
+	@When("^User selects number of adults and childrens as in test data$")
+	public void user_selects_number_of_adults_and_childrens_as_in_test_data() throws Throwable {
+	    selectOptionInDD(ph.getSh().roomNumbersDD(), "index", "2");
+	    
+	}
+
+	@When("^User clicks on search button$")
+	public void user_clicks_on_search_button() throws Throwable {
+	    ph.getSh().searchButton().click();
+	    
+	}
+
+	@Then("^User verifies that hotel displayed is same as selected in search hotel page$")
+	public void user_verifies_that_hotel_displayed_is_same_as_selected_in_search_hotel_page() throws Throwable {
+		String text = ph.getSh().usernameVerification().getAttribute("value");
+		Assert.assertEquals("Hello@cbzsrini!", text);
+		System.out.println(text);
+	}
+
 
 }

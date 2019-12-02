@@ -1,4 +1,4 @@
-package com.cucumber.CucumberDay2;
+package com.cucumber.base;
 
 import org.hamcrest.Factory;
 import org.openqa.selenium.WebDriver;

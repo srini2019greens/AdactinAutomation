@@ -1,4 +1,4 @@
-package com.cucumber.CucumberDay2;
+package com.cucumber.base;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -102,17 +102,18 @@ public class AllMethods {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 
-	public void asserts(Object[] expected, Object[] actual) {
+	/*public void asserts(Object[] expected, Object[] actual) {
 		Assert.assertEquals(expected, actual);
 		System.out.println("product found");
-	}
+	}*/
 
-	public static void screenShot(String filename) throws Throwable {
+	public static File screenShot(String filename) throws Throwable {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File screenshotAs = ts.getScreenshotAs(OutputType.FILE);
 		File dest = new File(
-				"C:\\Users\\cbzsr\\OneDrive\\Desktop\\eclipse\\jdk\\mavenproject\\screenShots\\" + filename + ".png");
+				"C:\\Users\\cbzsr\\OneDrive\\Desktop\\eclipse\\jdk\\CucumberDay2\\src\\test\\resource\\screenShot\\" + filename + ".png");
 		FileUtils.copyFile(screenshotAs, dest);
+		return dest;
 
 	}
 
